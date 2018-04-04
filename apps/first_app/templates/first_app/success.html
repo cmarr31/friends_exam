@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <title>  :add_title:  </title>
+    </head>
+    <body>
+    <div class="container">
+       <h1>Welcome {{ current.alias }}!</h1>
+    </div>
+    <h3><a href="/logout">Logout</a></h3>
+    <div>
+        {% if friends %}
+            <h4>Here is the list of your friends:</h4>
+        {% else %}
+            <h4>No friends to display.</h4>
+        {% endif %}
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Alias</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for friend in friends %}
+                    <tr>
+                        <td>{{ friend.alias }}</td>
+                        <td><a href="/user/{{ friend.id }}">View Profile</a> | <a href="/user/delete/{{ friend.id }}">Remove as Friend</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+
+            <h4>Other Users not on your friend's list:</h4>
+            <table>
+                <tr>
+                    <th>Alias</th>
+                    <th>Actions</th>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td><a href="/user/{{ user.id }}">{{ user.alias }}</a></td>
+                    <td>
+                        <form action="/user/add/{{ user.id }}" method='post'>
+                            {% csrf_token %}
+                            <input id="add" type="submit" value="Add as Friend">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    </body>
+</html>

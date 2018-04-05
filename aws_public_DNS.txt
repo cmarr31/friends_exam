@@ -1,0 +1,84 @@
+Instance ID
+i-03abc87f6355ca6a1
+Public DNS (IPv4)
+ec2-54-153-24-67.us-west-1.compute.amazonaws.com
+Instance state
+running
+IPv4 Public IP
+54.153.24.67
+Instance type
+t2.micro
+IPv6 IPs
+-
+Elastic IPs
+Private DNS
+ip-172-31-4-82.us-west-1.compute.internal
+Availability zone
+us-west-1c
+Private IPs
+172.31.4.82
+Security groups
+launch-wizard-2. view inbound rules
+Secondary private IPs
+Scheduled events
+No scheduled events
+VPC ID
+vpc-241f5740
+AMI ID
+ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20180306 (ami-925144f2)
+Subnet ID
+subnet-a72119ff
+Platform
+-
+Network interfaces
+eth0
+IAM role
+-
+Source/dest. check
+True
+Key pair name
+friends_exam_pem
+T2 Unlimited
+Disabled
+Owner
+187856161320
+EBS-optimized
+False
+Launch time
+April 4, 2018 at 5:59:35 PM UTC-5 (less than one hour)
+Root device type
+ebs
+Termination protection
+False
+Root device
+/dev/sda1
+Lifecycle
+normal
+Block devices
+/dev/sda1
+Monitoring
+basic
+Alarm status
+None
+Kernel ID
+-
+RAM disk ID
+-
+Placement group
+-
+Virtualization
+hvm
+Reservation
+r-0dc0b08f6d4327652
+AMI launch index
+0
+Tenancy
+default
+Host ID
+-
+Affinity
+-
+State transition reason
+-
+State transition reason message
+-
